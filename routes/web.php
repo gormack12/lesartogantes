@@ -17,7 +17,7 @@ Route::Auth();
 
 	Route::get('/', function () {
 	    // return view('welcome');
-	    var_dump($_ENV);
+	    dd($_ENV);
 	});
 
 	Route::get('/idea', 'Front\IdeaController@index')->name('idea');
