@@ -1,0 +1,95 @@
+
+
+
+/* Styles for the gallery */
+
+.tz-gallery {
+    padding: 20px 140px;
+}
+
+.tz-gallery .thumbnail {
+    padding: 0;
+    margin-bottom: 30px;
+    border: none;
+}
+
+.tz-gallery img {
+    border-radius: 2px;
+}
+
+
+.tz-gallery .caption{
+    padding: 26px 30px;
+    text-align: center;
+}
+
+.tz-gallery .main-caption h1 {
+    padding: 15px 70px 15px 15px;
+    text-align: right;
+    font-size: 4.5em;
+    background-color: black;
+    color: #f5f5f5;
+    display: inline-block;
+    border: 6px solid black;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+}
+
+.tz-gallery .main-caption h2, .tz-gallery .main-caption p{
+    padding: 15px 70px 15px 15px;
+    text-align: right;
+    background-color: black;
+    color: #f5f5f5;
+    display: inline-block;
+    border: 6px solid black;
+    transition: 0.2s;
+}   
+
+.tz-gallery .caption h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+
+.tz-gallery .caption h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.tz-gallery .caption p {
+    font-size: 12px;
+    color: #7b7d7d;
+    margin: 0;
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}
+
+.hero-image {
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    position: relative;
+    border-radius: 0 !important;
+    color: white;
+    height: 50% !important;
+    transition: 0.3s ease;
+}
+
+.hero-image:hover {
+    opacity: 0.8;
+}
+
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}

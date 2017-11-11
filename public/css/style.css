@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto|Raleway');
+
+html, body {
+  font-family: 'Raleway', 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.main-container {
+	margin-top: 8%;
+  	padding:10px 10px 90px 10px;
+}
+
+.navbar {
+  margin: 0;
+  background-color: #ffffff;
+  border: 0;
+  font-family: 'Lato', 'Roboto', sans-serif;
+  font-size: 16px !important;
+  letter-spacing: 4px;
+  padding: 20px;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: middle;
+  padding: 30px 0;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+.navbar-nav li a {
+  padding: 2px !important;
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+  color: #111 !important; 
+}
+
+.navbar-nav li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #333333;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.navbar-nav li a:hover:before, .navbar li a:focus:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.navbar-nav li a.active:after {
+  visibility: visible;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+}
+
+.teammember-container {
+	margin-bottom: 30px; 
+}
+
+.teammember {
+	background-color: #121212;
+	border-radius: 50%;
+	width: 270px;
+	margin: auto;
+}
+
+.teammember img {
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	vertical-align: middle;
+}
+
+.teammember span {
+	position: absolute;
+	top: 40%;
+	font-size: 1.4em;
+  	font-family: 'Lato', sans-serif;
+	color: white;
+	opacity: 0;
+	display: block;
+	text-align: center;
+	width: 270px;
+	padding: 10px 0;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.teammember:hover img {
+	opacity: 0.3;
+	cursor: pointer;
+}
+
+.teammember:hover span {
+	opacity: 1;
+}
+
+p {
+	word-wrap: break-word;
+	text-align: justify;
+	padding-top: 20px;
+	font-size: 16px;
+	line-height: 1.6em;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Raleway', sans-serif;
+}
+
+footer {
+  background-color: black;
+  color: #fff;
+  padding: 32px;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+footer h3 {
+  padding-bottom: 20px;
+}
+
+.btn-custom, .btn-newsletter {
+  background-color: black;
+  color: #ffffff;
+  border-radius: 0;
+  border: 1px solid #000000;
+  font-size: 1em;
+  padding: 10px;
+}
+
+footer a:hover {
+  color: inherit;
+}
