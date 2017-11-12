@@ -15,9 +15,11 @@
 				<div style="padding: 20px 140px;">
 					<img src="{{ $event->path_to_hero_picture }}" style="width: 100%; max-height: 500px;" />
 					
-					<p>{{ $event->theme }}</p>
+					<p>Theme: {{ $event->theme }}</p>
 
-					<p>{{ $event->description }}</p>
+					<p>Name: {{ $event->name }}</p>
+
+					<p>Description: {{ $event->description }}</p>
 				</div>
 			</div>
 		</div>
