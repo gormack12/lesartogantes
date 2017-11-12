@@ -13,7 +13,7 @@
 
 Route::Auth();
 
-Route::middleware('auth')->group(function () {
+// Route::middleware('auth')->group(function () {
 
 	Route::get('/', function () {
 	    return view('welcome');
@@ -38,4 +38,4 @@ Route::middleware('auth')->group(function () {
 	Route::resource('admin/teammember', 'TeammemberController');
 
 	Route::post('/newsletter', 'NewsletterController@store')->name('newsletter.store');
-});
+// });
