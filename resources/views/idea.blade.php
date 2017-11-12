@@ -3,7 +3,9 @@
 @section('content')
 	<div class="col-md-12">
 		<div class="row">
-			{{ dd($idea) }}
+			@if (count($idea) == 1)
+				<p>{!! $idea->content !! }</p>
+			@endif
 		</div>
 	</div>
 @endsection

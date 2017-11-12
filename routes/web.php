@@ -29,6 +29,10 @@ Route::Auth();
 
 	Route::get('/teammember/{id}/{name}', 'Front\TeammemberController@showTeammember')->name('teammember');
 
+	Route::get('/admin', function () {
+		return redirect()->route('login');
+	});
+
 	Route::get('/admin/home', 'HomeController@index');
 
 	Route::resource('admin/idea', 'IdeaController');
