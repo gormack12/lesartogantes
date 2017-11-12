@@ -16,8 +16,7 @@ Route::Auth();
 // Route::middleware('auth')->group(function () {
 
 	Route::get('/', function () {
-	    // return view('welcome');
-	    dd($_ENV);
+	    return view('welcome');
 	});
 
 	Route::get('/idea', 'Front\IdeaController@index')->name('idea');
