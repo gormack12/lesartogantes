@@ -16,10 +16,9 @@
 
 						<a href="{{ route('event', [$event->id, preg_replace('/\s+/', '_', $event->name)]) }}" class="jumbotron hero-image main-event-link" style="display: block; background-image: url('{{ $event->path_to_hero_picture }}');">
 		                 	<div class="main-caption">
-	                    			<h1>{{ ucwords($event->name) }}</h1>
+	                    		<h1>{{ ucwords($event->name) }}</h1>
 	                    		<br />
 	                    		<h2>{{ $event->location }}</h2>
-	                       		
 	                    		<br />
 	                       		<p>Event abstract</p>
 	                		</div>

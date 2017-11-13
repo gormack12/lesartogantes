@@ -16,7 +16,7 @@
 
 				<p>{!! nl2br($teammember->about) !!}</p>
 				<br />
-				<h4 style="font-weight: bold;font-family: 'Lato', sans-serif;">Adresse E-mail : {{ $teammember->email }}</h4>
+				<p>Adresse E-mail : {{ $teammember->email }}</p>
 
 			</div>
 		</div>
