@@ -21,13 +21,13 @@ Route::Auth();
 
 	Route::get('/idea', 'Front\IdeaController@index')->name('idea');
 
-	Route::get('/event/{id}/{name}', 'Front\EventController@showEvent')->name('event');
+	Route::get('/events/{id}/{name}', 'Front\EventController@showEvent')->name('event');
 
-	Route::get('/events', 'Front\EventController@index')->name('events');
+	Route::get('/events', 'Front\EventController@index')->name('events-list');
 
-	Route::get('/teammembers', 'Front\TeammemberController@index')->name('teammembers');
+	Route::get('/teammembers', 'Front\TeammemberController@index')->name('teammembers-list');
 
-	Route::get('/teammember/{id}/{name}', 'Front\TeammemberController@showTeammember')->name('teammember');
+	Route::get('/teammembers/{id}/{name}', 'Front\TeammemberController@showTeammember')->name('teammember');
 
 	Route::get('/admin', function () {
 		return redirect()->route('login');

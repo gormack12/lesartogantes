@@ -42,8 +42,8 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <ul class="nav navbar-na">
                         <li><a href="{{ route('idea') }}" class="nav-link">L'idée</a></li>
-                        <li><a href="{{ route('events') }}" class="nav-link">Evenements</a></li>
-                        <li><a href="{{ route('teammembers') }}" class="nav-link">L'Equipe</a></li>
+                        <li><a href="{{ route('events-list') }}" class="nav-link">Evenements</a></li>
+                        <li><a href="{{ route('teammembers-list') }}" class="nav-link">L'Equipe</a></li>
                     </ul>
                 </div>
             </div>
