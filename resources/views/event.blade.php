@@ -12,11 +12,11 @@
 
 			<div class="row">
 				
-				<div style="padding: 20px 140px;" class="col-md-12">
+				<div class="col-md-6 col-md-offset-3">
 					<img src="{{ $event->path_to_hero_picture }}" style="width: 100%";/>
 				</div>
 				
-				<div class="col-md-12">
+				<div class="col-md-6 col-md-offset-3">
 					<p>{{ $event->theme }}</p>
 
 					<p>{{ $event->name }}</p>
