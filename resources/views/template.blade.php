@@ -39,10 +39,8 @@
                         <span class="icon-bar"></span>
                     </button>
                 </div>
-
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- center Of Navbar -->
-                    <ul class="nav navbar-nav nav-center">
+                    <ul class="nav navbar-na">
                         <li><a href="{{ route('idea') }}" class="nav-link">L'idée</a></li>
                         <li><a href="{{ route('events') }}" class="nav-link">Evenements</a></li>
                         <li><a href="{{ route('teammembers') }}" class="nav-link">L'Equipe</a></li>
@@ -59,7 +57,7 @@
 
         @include('modals.newsletter')
 
-        <footer class="container text-center">
+        <footer class="container-fluid text-center">
             <div class="row">
                 <div class="col-md-4">
                     <h3>&copy; {{ date('Y') }} - Les Ar(t)ogantes</h3>

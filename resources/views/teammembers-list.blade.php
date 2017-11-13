@@ -5,7 +5,7 @@
 		<div class="row">
 			@if (count($teammembers))
 				<div class="col-md-12 text-center">
-					<h1 style="font-weight: bold;font-size: 6.5em;font-family: 'Raleway', sans-serif;padding-bottom: 20px;">Les Ar(t)ogantes</h1>
+					<h1 style="font-weight: bold;font-size: 4.5em;font-family: 'Raleway', sans-serif;padding-bottom: 30px;margin:0;">Les Ar(t)ogantes</h1>
 				</div>
 
 				@foreach($teammembers as $teammember)
@@ -16,11 +16,9 @@
 					<div class="col-md-4 teammember-container">
 						<div class="teammember">
 							<a href="{{ route('teammember', [$id, $name]) }}">
-								<img src="{{ $teammember->path_to_picture }}" class="img-circle person" alt="{{ $teammember->firstname }}" width="270" height="270">
+								<img src="{{ $teammember->path_to_picture }}" class="img-circle person" alt="{{ $teammember->firstname }}" width="250" height="250">
 
-								<span class="text-center">
-									<strong>{{ $teammember->firstname . ' ' . $teammember->lastname }}</strong>
-								</span>
+								<span class="text-center">{{ $teammember->firstname . ' ' . $teammember->lastname }}</span>
 							</a>
 						</div>
 					</div>
