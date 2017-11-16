@@ -38,12 +38,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+                    <a class="navbar-brand" href="/"><img src="{{ Storage::url('logo.png') }}" width="100" height="100"></a>
                 </div>
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <ul class="nav navbar-na">
                         <li><a href="{{ route('idea') }}" class="nav-link">L'idée</a></li>
-                        <li><a href="{{ route('events-list') }}" class="nav-link">Evenements</a></li>
-                        <li><a href="{{ route('teammembers-list') }}" class="nav-link">L'Equipe</a></li>
+                        <li><a href="{{ route('events-list') }}" class="nav-link">Les événements</a></li>
+                        <li><a href="{{ route('teammembers-list') }}" class="nav-link">L'équipe</a></li>
                     </ul>
                 </div>
             </div>

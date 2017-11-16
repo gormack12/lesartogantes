@@ -8,20 +8,24 @@
 	@if (count($event) == 0)
 	
 	@else
-		<div class="container" >
+		<div class="container">
 
-			<div class="row">
+			<div style="padding: 20px 140px;">
 				
-				<div class="col-md-6 col-md-offset-3">
-					<img src="{{ $event->path_to_hero_picture }}" style="width: 100%";/>
-				</div>
-				
-				<div class="col-md-6 col-md-offset-3">
-					<p>{{ $event->theme }}</p>
+				<div class="row">
+					<div class="col-md-12">
+						<figure>
+							<img src="{{ $event->path_to_hero_picture }}" style="width: 100%";/>
+						</figure>
+					</div>
 
-					<p>{{ $event->name }}</p>
+					<div class="col-md-6 col-md-offset-3 text-center">
+						<h1 class="text-center">{{ $event->theme }}</h1>
 
-					<p>{{ $event->description }}</p>
+						<p>{{ $event->name }}</p>
+
+						<p>{{ $event->description }}</p>
+					</div>
 				</div>
 			</div>
 		</div>

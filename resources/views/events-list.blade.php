@@ -14,13 +14,13 @@
 					
 					<div class="row">
 
-						<a href="{{ route('event', [$event->id, preg_replace('/\s+/', '_', $event->name)]) }}" class="jumbotron hero-image main-event-link" style="display: block; background-image: url('{{ $event->path_to_hero_picture }}');">
+						<a href="{{ route('event', [$event->id, preg_replace('/\s+/', '_', $event->name)]) }}" class="jumbotron hero-image" style="display: block; background-image: url('{{ $event->path_to_hero_picture }}');">
 		                 	<div class="main-caption">
 	                    		<h1>{{ ucwords($event->name) }}</h1>
-	                    		<br />
-	                    		<h2>{{ $event->location }}</h2>
-	                    		<br />
-	                       		<p>Event abstract</p>
+	                    		
+	                    		<h3>{{ $event->location }}</h3>
+	                    		
+	                       		<h3>Event abst</h3>
 	                		</div>
 	                	</a>
 

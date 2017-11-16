@@ -15,8 +15,8 @@
 				<h3 class="text-center">{{ ucfirst($teammember->role) }}</h3>
 
 				<p>{!! nl2br($teammember->about) !!}</p>
-				<br />
-				<p>Adresse E-mail : {{ $teammember->email }}</p>
+
+				<p>Contact : {{ $teammember->email }}</p>
 
 			</div>
 		</div>
