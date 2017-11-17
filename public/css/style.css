@@ -1,158 +1,98 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400|Open+Sans:300,400|Roboto|Raleway');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 html, body {
-  font-family: 'Open Sans', 'Roboto', sans-serif;
+  background-color: #F0F0ED;
   font-size: 13px;
-  color: #333;
-
+  font-family: 'Open Sans', sans-serif;
+  height: 100% !important;
+  margin: 0;
 }
 
-.main-container {
-	margin-top: 10%;
-  padding:10px 10px 90px 10px;
+.app {
+  padding: 80px 20px;
+  height: 100%;
 }
 
-.navbar {
-  margin: 0 auto;
-  background-color: #ffffff;
-  border: 0;
-  font-family: 'Lato', sans-serif !important;
-  font-size: 1.5em !important;
-  font-weight: 300;
-  letter-spacing: 4px;
+.container {
+  padding: 0;
 }
 
-.navbar .navbar-na {
-  text-align: center;
-  float: none;
-  vertical-align: middle;
-  padding: 50px 0 30px;
-  border-bottom: 1px solid #333;
-  width: 85%;
-  margin: auto;
+div.header {
+  border-bottom: 2px solid #FFFFFF;
+  margin-bottom: 40px;
+  padding-bottom: 40px; 
 }
 
-.navbar .navbar-na li {
+.logo {
+  text-align: right;
+}
+
+.brand {
+  font-family: 'Lato', sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
   display: inline-block !important;
 }
 
-.navbar .navbar-collapse {
-    text-align: center;
+.navbar {
+  text-align: right;
+  color: #333;
 }
 
-.navbar-na li a, .navbar-na li a:hover, .navbar-na li a:visited {
+.navbar-toggler {
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+
+.material-icons.md-36 { font-size: 32px; }
+
+.nav-item {
+  padding: 6px 0px;
+}
+
+.navbar-nav .nav-link, .navbar-nav .nav-link:hover {
+  font-size: 1.3em;
   padding: 2px !important;
-  margin-left: 10px !important;
-  margin-right: 10px !important;
+  text-transform: uppercase;
   color: #333 !important;
   background-color: inherit;
+}
+
+.dropdown-toggle::after {
+    display:none
+}
+
+.dropdown-menu {
+  text-align: right;
+  background-color: inherit;
+  border: none;
+}
+
+.dropdown-item, .dropdown-item:hover {
+  font-size: 1em;
   text-transform: uppercase;
+  margin: 0;
+  padding-right: 2px;
+  background-color: inherit;
 }
 
-.navbar-na li a:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  background-color: #333;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.2s ease-in-out 0s;
-  transition: all 0.2s ease-in-out 0s;
-}
-
-.navbar-na li a:hover:before, .navbar li a:focus:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
-
-.navbar-na li a.active:after {
-  visibility: visible;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  background-color: #333 !important;
-}
-
-.teammember-container {
-	margin-bottom: 30px;
-}
-
-.teammember {
-	background-color: #121212;
-	border-radius: 50%;
-	width: 180px;
-	margin: auto;
-}
-
-.teammember img {
-	-webkit-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-	vertical-align: middle;
-}
-
-.teammember span {
-	position: absolute;
-	top: 40%;
-	font-size: 1.4em;
-  font-family: 'Raleway', sans-serif;
-	color: white;
-	opacity: 0;
-	display: block;
-	text-align: center;
-	width: 180px;
-	padding: 10px 0;
-	-webkit-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-}
-
-.teammember:hover img {
-	opacity: 0.3;
-	cursor: pointer;
-}
-
-.teammember:hover span {
-	opacity: 1;
-}
-
-p {
-	word-wrap: break-word;
-	text-align: justify;
-	padding-top: 20px;
-	line-height: 1.6em;
-}
-
-h1, h2, h3, h4 {
-	font-family: 'Lato', sans-serif !important;
+.idea-content {
+  column-count: 2;
+  text-align: justify;
+  text-indent: 100px;
+  column-gap: 40px;
+  -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+  -moz-column-gap: 40px; /* Firefox */
 }
 
 footer {
-  border-top: 1px solid black;
-  padding: 32px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: normal;
+  margin-top: 80px;
 }
-
-footer h3 {
-  font-size: 1.2em
-  padding-bottom: 20px;
-}
-
-.btn-custom, .btn-newsletter {
-  background-color: black;
-  color: #ffffff;
-  border-radius: 0;
-  border: 1px solid #000000;
-  padding: 10px;
-}
-
-footer a:hover {
-  color: inherit;
+* {
+  /*border:1px solid black;*/
 }

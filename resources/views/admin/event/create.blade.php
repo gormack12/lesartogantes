@@ -47,13 +47,13 @@
 				</div>
 
 				<div class="form-group">
-					<label for="day" class="col-md-2 control-label">Date</label>
+					<label for="startday" class="col-md-2 control-label">Start Date</label>
 
 					<div class="col-md-3">
-						<select id="day" name="day" class="form-control" required>
+						<select id="startday" name="startday" class="form-control" required>
 							<optgroup label="day">
 								@for ($i = 1; $i <= 31; $i++)
-									@if (old('day') == $i)
+									@if (old('startday') == $i)
 										<option value="{{ $i }}" selected="">{{ $i }}</option>
 									@else
 										<option value="{{ $i }}">{{ $i }}</option>
@@ -65,10 +65,10 @@
 
 					<div class="col-md-4">
 
-						<select id="month" name="month" class="form-control" required>
-							<optgroup label="month">
+						<select id="month" name="startmonth" class="form-control" required>
+							<optgroup label="startmonth">
 								@for ($i = 1; $i <= 12; $i++)
-									@if (old('month') == $i)
+									@if (old('startmonth') == $i)
 										<option value="{{ $i }}" selected>{{ DateTime::createFromFormat ('!m', $i)->format('F') }}</option>
 									@else
 										<option value="{{ $i }}">{{ DateTime::createFromFormat ('!m', $i)->format('F') }}</option>
@@ -79,10 +79,57 @@
 					</div>
 
 					<div class="col-md-3">
-						<select name="year" id="year" class="form-control" required>
+						<select name="startyear" id="startyear" class="form-control" required>
 							<optgroup label="year">
 								@for ($i = date('Y'); $i <= date('Y') + 5; $i++)
-									@if (old('year') == $i)
+									@if (old('startyear') == $i)
+										<option value="{{ $i }}" selected>{{ $i }}</option>
+									@else
+										<option value="{{ $i }}">{{ $i }}</option>
+									@endif
+								@endfor
+							</optgroup>
+						</select>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label for="endday" class="col-md-2 control-label">End Date</label>
+
+					<div class="col-md-3">
+						<select id="endday" name="endday" class="form-control" required>
+							<optgroup label="day">
+								@for ($i = 1; $i <= 31; $i++)
+									@if (old('endday') == $i)
+										<option value="{{ $i }}" selected="">{{ $i }}</option>
+									@else
+										<option value="{{ $i }}">{{ $i }}</option>
+									@endif
+								@endfor
+							</optgroup>
+						</select>
+					</div>
+
+					<div class="col-md-4">
+
+						<select id="endmonth" name="endmonth" class="form-control" required>
+							<optgroup label="endmonth">
+								@for ($i = 1; $i <= 12; $i++)
+									@if (old('endmonth') == $i)
+										<option value="{{ $i }}" selected>{{ DateTime::createFromFormat ('!m', $i)->format('F') }}</option>
+									@else
+										<option value="{{ $i }}">{{ DateTime::createFromFormat ('!m', $i)->format('F') }}</option>
+									@endif
+								@endfor
+							</optgroup>
+						</select>
+					</div>
+
+					<div class="col-md-3">
+						<select name="endyear" id="endyear" class="form-control" required>
+							<optgroup label="year">
+								@for ($i = date('Y'); $i <= date('Y') + 5; $i++)
+									@if (old('endyear') == $i)
 										<option value="{{ $i }}" selected>{{ $i }}</option>
 									@else
 										<option value="{{ $i }}">{{ $i }}</option>

@@ -19,9 +19,12 @@ class CreateEventsTable extends Migration
             $table->string('path_to_hero_picture');
             $table->string('theme');
             $table->string('name')->unique();
-            $table->integer('day');
-            $table->integer('month');
-            $table->integer('year');
+            $table->integer('startday');
+            $table->integer('startmonth');
+            $table->integer('startyear');
+            $table->integer('endday');
+            $table->integer('endmonth');
+            $table->integer('endyear');
             $table->string('location');
             $table->text('description');
         });

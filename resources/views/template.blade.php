@@ -11,74 +11,94 @@
     <title>{{ config('app.name') }}</title>
 
     <!-- Styles -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
 
     <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
     <script type="text/javascript" src="/js/global.js"></script>
 
 
     @yield('style')
 
 </head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/"><img src="{{ Storage::url('logo.png') }}" width="100" height="100"></a>
-                </div>
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <ul class="nav navbar-na">
-                        <li><a href="{{ route('idea') }}" class="nav-link">L'idée</a></li>
-                        <li><a href="{{ route('events-list') }}" class="nav-link">Les événements</a></li>
-                        <li><a href="{{ route('teammembers-list') }}" class="nav-link">L'équipe</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
 
-        <div class="container main-container">
+<body>
+
+    <div id="app" class="app">
+        <div class="container header">
             <div class="row">
-                @yield('content')
+                <div class="col-md-9">
+                    <h1 class="brand align-middle">Les ar.t.ogantes</h1>
+                </div>
+
+                <div class="col-md-3 logo">
+                    <a href="/">
+                        <img src="{{ Storage::url('logo.png') }}" width="100" />
+                    </a>
+                </div>
             </div>
         </div>
 
-        @include('modals.newsletter')
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="row">
+                        @yield('content')
+                    </div>
+                </div>
 
-        <footer class="container-fluid text-center">
+                <div class="col-md-3 " >
+                    <nav class="navbar navbar-toggleable-md">
+                        <div class="navbar-brand"></div>
+                            
+                        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="material-icons md-32">more_horiz</i>
+                        </button>
+
+                        <div class="collapse navbar-collapse show" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="{{ route('idea') }}">l'idée</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('events-list') }}">les événements</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                    l'équipe
+                                  </a>
+                                  <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="{{ route('teammember', [$teammember->id, $teammember->name]) }}">Camille</a>
+                                        <a class="dropdown-item" href="{{ route('teammember', [$teammember->id, $teammember->name]) }}">Sophie</a>
+                                    </div>
+                                </li>
+                            </ul>
+                      </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <footer class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h3>&copy; {{ date('Y') }} - Les Ar(t)ogantes</h3>
                     
-                    <a href="#myModal" data-toggle="modal"><span class="glyphicon glyphicon-envelope"></span> S'inscrire à la newsletter</a>
                 </div>
-
-                <div class="col-md-4 text-center">
-                    <h3>Développement</h3>
-                    <span style="padding: 10px;">Hugues Tchouala</span>
+                <div class="col-md-4">
+                    <p class="text-center">&copy; LES AR.T.OGANTES - {{ date('Y') }}</p>
                 </div>
-                
-                <div class="col-md-4 text-center">
-                    <h3>Médias</h3>
+                <div class="col-md-4">
+                    
                 </div>
             </div>
         </footer>
     </div>
 
-    <!-- Scripts -->
-    <!-- <script src="{{ asset('js/app.js') }}"></script> -->
 </body>
 </html>

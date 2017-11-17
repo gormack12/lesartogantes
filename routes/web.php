@@ -27,7 +27,7 @@ Route::Auth();
 
 	Route::get('/teammembers', 'Front\TeammemberController@index')->name('teammembers-list');
 
-	Route::get('/teammembers/{id}/{name}', 'Front\TeammemberController@showTeammember')->name('teammember');
+	Route::get('/teammember/{id}/{name}', 'Front\TeammemberController@showTeammember')->name('teammember');
 
 	Route::get('/admin', function () {
 		return redirect()->route('login');
